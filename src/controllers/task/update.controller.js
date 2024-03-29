@@ -2,7 +2,7 @@ import { Task } from "../../models/index.js";
 
 export const updateTask = async (req, res) => {
   const { id } = req.params;
-  const { data } = req.body;
+  const data = req.body;
   try {
     const updated = await Task.findByIdAndUpdate(id, data);
     return updated
